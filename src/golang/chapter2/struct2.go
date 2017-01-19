@@ -20,6 +20,24 @@ func main() {
 		person:  p,
 	}
 	c.Nationality()
+
+	fmt.Println("-- mutable --")
+	m := Mutable{
+		a: 3,
+		b: 1,
+	}
+	m.mutate()
+	fmt.Println(m)
+}
+
+type Mutable struct {
+	a int
+	b int
+}
+
+func (m *Mutable) mutate() {
+	m.a = 10
+	m.b = 9
 }
 
 type Citizen struct {
