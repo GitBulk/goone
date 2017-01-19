@@ -7,6 +7,7 @@ func main() {
 
 	fmt.Println(add(10, 5))
 	fmt.Println(add2(10, 7))
+	fmt.Println(add3(2, 3, 1))
 	region, continent := location2("LA")
 	fmt.Printf("I live in %s, %s", region, continent)
 
@@ -18,6 +19,14 @@ func add(x int, y int) int {
 
 func add2(x, y int) int {
 	return x + y
+}
+
+func add3(args ...int) int {
+	total := 0
+	for _, value := range args {
+		total += value
+	}
+	return total
 }
 
 func location(city string) (string, string) {
