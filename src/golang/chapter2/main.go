@@ -1,11 +1,12 @@
 package main
 
-import "fmt"
-
-// this is a comment
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	fmt.Println("Hello world, I am Sieu Nhan Gao")
+	fmt.Println("Hello world, I am Sieu Nhan Gao, time:", time.Now())
 	fmt.Println("1 + 1 = ", 1+1)
 	fmt.Println(len("Hello world"))
 	fmt.Println("Hello world"[1])
